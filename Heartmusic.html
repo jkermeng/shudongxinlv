@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>心灵心语</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="html.css">
+  <script type="text/javascript">
+    window.onload = function () {
+    var broadcast = document.getElementById("broadcast"),
+        img_list = document.getElementById("img_list"),
+        button_list = document.getElementById("button_list").getElementsByTagName("li"),
+        index = 0,
+        timer = null;
+        //初始化
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
+   
+        // 自动切换
+        timer = setInterval(autoPlay, 2000);
+   
+        // 调用自动播放函数
+        function autoPlay() {
+            index++;
+            if (index >= button_list.length) {
+                index = 0;
+            }
+            imgChange(index);
+        }
+    
+    function imgChange(buttonIndex) {
+        for (let i = 0; i < button_list.length; i++) {
+            button_list[i].className="";
+        }
+        button_list[buttonIndex].className = "first-li";//按钮样式切换
+        img_list.style.marginLeft = -1000 * buttonIndex + "px";
+        index = buttonIndex;
+    }
+    //鼠标接触div
+    broadcast.onmouseover = function(){
+        clearInterval(timer);
+
+    }
+    //鼠标离开div
+    broadcast.onmouseout = function(){
+        timer = setInterval(autoPlay, 2000);
+    }
+    //鼠标悬停ol
+    for (var i = 0; i < button_list.length; i++) {
+        button_list[i].id = i;
+        button_list[i].onmouseover = function() {
+            clearInterval(timer);
+            imgChange(this.id);
+        }
+    }
+}
+
+ </script>
+
+</head>
+<body >
+ <div class="nav">
+
+  <ul class="navLeft">
+    <li><a href="#"><img src="image/logo.png"></a></li>
+
+  </ul>
+  <ul class="navMiddle">
+    <li><a href="index.html">首页</a></li>
+    <li  class="active"><a href="#">心旅
+      <div class="submenu">
+        <a href="Heartylecture.html">心灵文库</a>
+        <a href="Heartmusic.html">心灵心语</a>
+        <a href="HeartVido.html">心灵视界</a>
+      </div>
+      </a>
+      </li>
+      
+    <li><a href="HeartKnowledge.html">心知</a></li>
+    <li><a href="#">倾诉</a></li>
+  </ul>
+  <ul class="navRight">
+    <li><input type="text" name="search"><a href="#"><img src="image/放大镜.png" style="padding-top: 10px;"></a></li>
+    <li id="login"><a class="bt" href="#">登入</a></li>
+    <li id="login"><a class="bt" href="#">注册</a></li>
+    <li id="login"><a class="bt" href="#">个人中心</a></li>
+  </ul>
+
+</div>
+
+  <div class="navy">
+<div class="warp"> 
+ 
+        <div class="broadcast" id="broadcast">
+
+            <ul id="img_list">
+                <li><a href="#"><img src="image/t1.png" alt="1"></a></li>
+                <li><a href="#"><img src="image/t2.png" alt="2"></a></li>
+                <li><a href="#"><img src="image/t3.png" alt="3"></a></li>
+                <li><a href="#"><img src="image/t4.png" alt="4"></a></li>
+            </ul>
+            <!-- 轮播按钮 -->
+            <ol id="button_list"> 
+                <li class="first-li" id="olli1">1</li>
+                <li id="olli2">2</li>
+                <li id="olli3">3</li>
+                <li id="olli4">4</li>
+            </ol>
+           </div> 
+       
+    </div>
+   
+        <div  id="container">
+          <div id="photo">
+            <img src="image/1.jpg" >
+            <img src="image/2.jpg" >
+            <img src="image/3.jpg" >
+            <img src="image/4.jpg">
+        </div>
+    </div>
+ </div>
+	<div id="music">
+		
+		<ul class="left">
+			<li>
+          <font face="verdana" color="#00ffe9" size="5"><b>精选</b></font>
+          <font face="verdana" color="#000" size="5"><b>歌曲</b></font>
+		</li>
+		</ul>
+		<ul class="right">
+			<li>
+        <a href="#" >更多</a>
+    </li>
+        </ul>
+	</div>
+
+     <!-- 	<div class="g1">
+     	  <a href="#"><img src="images/1.jpg"> </a>
+     	    <h1>小幸运</h1>
+     	    <h2>田馥甄</h2>
+     	  </div>
+     <div class="g2">
+          <a href="#"><img src="images/2.jpg"> </a>
+          <h1>岁月神偷</h1>
+     	    <h2>金玟岐</h2>
+     </div>
+          <div class="g3">
+          <a href="#"><img src="images/3.jpg"> </a>
+            <h1>告白气球</h1>
+     	    <h2>周杰伦</h2>
+     </div>
+          <div class="g4">
+          <a href="#"><img src="images/4.jpg"> </a>
+                      <h1>光年之外</h1>
+     	    <h2>邓紫棋</h2>
+     </div>
+          <div class="g5">
+          <a href="#"><img src="images/5.jpg"> </a>
+            <h1>成都</h1>
+     	    <h2>赵雷</h2>
+     </div>
+               <div class="g6">
+          <a href="#"><img src="images/6.jpg"> </a>
+          <h1>淘汰</h1>
+     	    <h2>陈奕迅</h2>
+     </div>
+               <div class="g7">
+          <a href="#"><img src="images/7.jpg"> </a>
+          <h1>我的天空</h1>
+     	    <h2>南征北战</h2>
+     </div>
+ -->
+     <div id="Heart">
+     	<h1>倾听心灵,享受宁静。</h1>
+     	<p>生命需要留白,适当的驻足和停留,让我们更好的倾听自己心灵的感受。</p>
+     	<p>停下来,让心跟上我们的脚步</p>
+     </div>
+     <br>
+     <div id="photo1">
+     	<div class="fl">
+     		<a href="#"><h1>请不要打扰她的灵魂上路</h1></a>
+       </div>
+            	<div class="f2">
+     		<a href="#"><h1>我在</h1></a>
+       </div>
+            	<div class="f3">
+     		<a href="#"><h1>你没权利批判我</h1></a>
+       </div>
+            	<div class="f4">
+     		<a href="#"><h1>那些走过的弯路和爱过的烂人</h1></a>
+       </div>
+            	<div class="f5">
+     		<a href="#"><h1>我更愿意做我自己</h1></a>
+       </div>
+            	<div class="f6">
+
+     		<a href="#"><h1>你所谓的稳定</h1></a>
+       </div>
+</div>
+<!--   </div>
+       	<div class="fl">
+      <a href="#"><img src="images/v4.jpg"></a>
+      <a href="#"><img src="images/v5.png"></a>
+      <a href="#"><img src="images/v6.jpg"></a>
+  </div> -->
+   <footer>
+     <div class="misonog">
+  <div class="about">
+  <a href="#"><span>关于我们</span></a>
+  <a href="#"><span>加入树洞</span></a>
+  <a href="#"><span>用户协议</span></a>
+  <a href="#"><span>隐私政策</span></a>
+  <a href="#"><span>企业服务</span></a>
+  <a href="#"><span>帮助中心</span></a>
+  <a href="#"><span>联系我们</span></a>
+  <a href="#"><span>关注我们</span></a>
+    </div>
+  <div class="contack">
+    <!-- <p>联系我们：树洞心旅</p> -->
+    <p>电话：xxx-xxxxxxx/xx</p>
+    <p>邮箱：857957816@qq.com</p>
+    <p>地址：广西省南宁市西乡塘区鹏飞路1号广西民族大学相思湖学院</p>
+    
+  </div>
+  <!--  <div class="erweima">
+      <span>关注我们扫描二维码：</span>
+      <br>
+      <img src="image/qrcode_for_gh_fd26b1d47d2e_430.jpg" width="150">
+    </div> -->
+  </div>
+  <!-- 版权 -->
+  <div class="copyright">
+    <span>Copyright &copy; by广西民族大学相思湖学院树洞心旅
+</span>
+  </div>
+   </footer>
+</body>
+</html>
+ <script type="text/javascript">
+    window.onload = function1 () {
+    var broadcast1 = document.getElementById("broadcast1"),
+        img_list1 = document.getElementById("img_list1"),
+        button_list0 = document.getElementById("button_list0").getElementsByTagName("li"),
+        index1 = 0,
+        timer1 = null;
+        //初始化
+        if (timer1) {
+            clearInterval(timer1);
+            timer1 = null;
+        }
+   
+        // 自动切换
+        timer1 = setInterval(autoPlay1, 2000);
+   
+        // 调用自动播放函数
+        function autoPlay1() {
+            index++;
+            if (index1 >= button_list0.length) {
+                index1 = 0;
+            }
+            imgChange(index1);
+        }
+    
+    function imgChange(buttonIndex1) {
+        for (let i = 0; i < button_list0.length; i++) {
+            button_list0[i].className="";
+        }
+        button_list0[buttonIndex1].className = "first-li0";//按钮样式切换
+        img_list1.style.marginLeft = -1000 * buttonIndex1 + "px";
+        index = buttonIndex1;
+    }
+    //鼠标接触div
+    broadcast1.onmouseover = function(){
+        clearInterval(timer1);
+
+    }
+    //鼠标离开div
+    broadcast1.onmouseout = function(){
+        timer1 = setInterval(autoPlay1, 2000);
+    }
+    //鼠标悬停ol
+    for (var i = 0; i < button_list0.length; i++) {
+        button_list0[i].id = i;
+        button_list0[i].onmouseover = function() {
+            clearInterval(timer1);
+            imgChange(this.id);
+        }
+    }
+}
+
+ </script>

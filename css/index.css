@@ -1,0 +1,554 @@
+body{
+
+background: #FFF;
+margin: 0;
+padding: 0;
+font:16px/1.5 'Microsoft Yahei';
+text-align: center;
+
+}
+
+/*导航栏*/
+.nav{
+
+	background: rgb(255, 255, 255);
+	color: #FFF;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+
+}
+
+.nav ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	height: 59px;
+}
+.navLeft li,.navMiddle li{
+	float: left;
+	padding: 10px 30px;
+	position: relative;
+	line-height: 42px;
+	text-align: center;
+
+}
+.navRight li{
+	float: left;
+	padding: 10px 5px;
+	position: relative;
+	line-height: 42px;
+	text-align: center;
+}
+
+
+.navMiddle li.active a{
+	color: red;
+	border-bottom: 2px solid #E54D42;
+}
+.navMiddle li a:hover {
+	text-decoration: none;
+	border-bottom: 2px solid red;
+	color: black;
+
+}
+.navMiddle li a{
+	display: block;
+	border-bottom: 4px solid transparent;
+	padding-left: 10px;
+ 	padding-right: 10px;
+
+}
+
+
+
+/*二级菜单显示*/
+.navMiddle li:hover .submenu{
+	display: block;
+	color: #888;
+	
+	
+
+}
+/*二级菜单*/
+.submenu {
+
+	margin-bottom: 1px;
+	display: none;
+	position: absolute;
+	top: 65px;
+	left: 0;
+
+
+
+}
+.submenu a{
+
+	padding: 0 20px;
+	min-width: 80px;
+	color: white;
+	background: white;
+
+
+
+}
+.submenu a:hover{
+	color: white;
+	background: red;
+
+
+}
+
+.navLeft li a img{
+
+	width: 50px;
+	height: 50px;
+	margin-top: -5px;
+	margin-left: 20px;
+	border: none;
+
+}
+
+.navLeft li a,.navRight li a,.navMiddle li a{
+
+	font-size: 14px;
+	color: #888;
+}
+
+a{
+	text-decoration: none;
+}
+.navLeft{
+	float: left;
+	left: 20%;
+}
+.navRight{
+	float: right;
+}
+.navMiddle{
+	float: left;
+		
+}
+
+.bg {
+	
+	height: 350px;
+	background: #888;
+	z-index: -1;
+	position:relative;
+	overflow: hidden;
+	background-position: center center;
+	background-size: cover;
+	
+
+}
+.bg img{
+
+	top: 0px;
+	width: 100%;
+	position: relative;
+	
+
+
+
+}
+
+.navRight li input{
+	outline: none;
+	width: 200px;
+	padding: 5px 20px;
+	margin: 10px 0;
+	font-size: 10px;
+	color: #333;
+	border: 1px solid #DDD;
+	border-radius: 30px;
+	float: right;
+	position: relative;
+
+}
+.navRight li img{
+	position: relative;
+	left: 230px;
+	top: 4px;
+	width: 19px;
+	height: 19px;
+}
+#login{
+	position: relative;
+	right: 0;
+}
+#login a{
+	color: white;
+}
+
+.bt{
+	background-color: #ffac00;
+	border-color: #ffac00;
+	display: inline-block;
+    margin-bottom: 0;
+    padding: .5em 1em;
+    vertical-align: middle;
+	    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 0;
+	user-select: none;
+	transition: background-color .3s ease-out,border-color .3s ease-out;
+}
+.bt:visited {
+	color: white;
+}
+.bt:hover{
+	background-image: none;
+    background-color: #a87409;
+    border-color: #a87100;
+}
+footer{
+	margin: 0;
+	padding: 0;
+	background-color: #2D3237;
+	height: 250px;
+	margin-top: 1rem;
+}
+.contack{
+	margin: 30px 100px;
+	position: relative;
+	margin-left: 100px
+}
+.contack p{
+	color: #e1e1e1;
+	margin: 0 30px;
+}
+.about{
+margin: 0 120px;
+position: relative;	
+margin-left: 150px;
+top: 150px;
+}
+.about span{
+	color: #73767d;
+}
+.erweima{
+	margin: -150px 100px;
+	float: right;
+	right: 10px;
+
+}
+.erweima span{
+	float: none;
+	top: 20px;
+}
+.copyright{
+	top: 34px;
+	position: relative;
+	background-color: #23282D;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    font-size: .8rem;
+    color: #666;
+ 
+}
+.maintext{
+	font-size: 20pt;
+	margin: 0 auto;
+	padding: 15px;
+	display: block;
+
+
+}
+.dataanalysis:hover .maintext{
+	display: block;
+}
+.content{
+	/*background: red;*/
+	margin:0 auto;
+	padding: 10px 20px;
+
+}
+.HeartyKnowlege{
+
+	/*background: blue;*/
+	margin:0 auto;
+	padding: 10px 10px;
+	height: 650px;
+	width:	1000px;
+	/*position: relative;*/
+}
+
+.HeartyKnowlege h2,.HeartyStory h2{
+	float: left;
+}
+.HeartyKnowlege ul{
+
+	margin: 90px 0 0 -30px;
+
+}
+.maincontent{
+	/*background: red;*/
+	width: 1450px;
+	margin: 0 auto;
+	height: 300px;
+	margin-left: 0;
+	margin-right: 0px;
+		transition: all 1s;
+	transform: translate(-550px,10px);
+
+
+}
+.maincontent:hover{
+
+	transform: scale(1,1);
+}
+.dataanalysiss{
+position: relative;
+margin: 0 auto;
+top: -325px;
+left: 750px;
+width: 500px;
+height: 400px;
+text-indent: 2em;
+margin-left: 0;
+	
+
+}
+
+.maincontent a img{
+	position: relative;
+	width: 433px;
+	height: 330px;
+	left: -200px;
+
+}
+
+
+.dataanalysis{
+	margin:0 auto;
+	padding: 20px 0;
+	width: 1500px;
+	height: 800px;
+	/*display: none;*/
+}
+
+}
+.contentleft{
+	/*background: red;*/
+	position: relative;
+	margin: 0 auto;
+	float: left;
+	width: 4000px;
+
+}
+.contentright ul,.contentleft ul{
+	margin: 40px 0 0 0 ;
+}
+.contentleft ul li a span,.contentright ul li a span{
+	position: absolute;
+	left: 145px;
+}
+.contentright{
+	/*background: blue;*/
+	position: relative;
+	float: right;
+	width: 398px;
+	height: 533px;
+	top: -540px;
+}
+.contentleft ul li a img,.contentright ul li a img{
+	width: 126px;
+	height: 86px;
+	position: relative;
+	left: -120px;
+
+}
+.HeartyKnowlege ul li{
+float: left;
+list-style: none;
+margin: 10px 20px;
+padding: 0 15px;
+/*background: yellow;*/
+}
+.HeartyKnowlege ul li:hover {
+	background: rgba(0, 0, 0, 0.1);
+	color: #00B71B;
+	border: 50px;
+	border-radius: 30%;
+}
+
+.submenu2{
+	display: none;
+	position: absolute;
+	top: 495px;
+	/*background: green;*/
+	
+	height: 628px;
+	width: 900px;
+	margin:0 auto;
+	left: 0;
+	right: 0;
+	max-width: 100%;
+
+}
+
+.submenu2 ul li{
+	/*background: yellow;*/
+	margin: 0;
+	margin-left: -60px;
+	height: 100px;
+	padding: 10px 10px;
+	width: 360px;
+}
+
+.HeartyKnowlege ul li:hover .submenu2{
+	display:block;
+	color: black;
+	z-index: 1;
+
+
+}
+.HeartyKnowlege ul li:visited .submenu2{
+	display: block;
+	color: black;
+	z-index: 1;
+
+
+}
+.HeartyKnowlege ul li:link .submenu2{
+	display: block;
+	color: black;
+	z-index: 1;
+
+
+}
+
+.HeartyKnowlege ul li a{
+	color: black;
+}
+
+.HeartyStory{
+	/*background: yellow;*/
+	margin: 0 auto;
+	padding: 10px;
+	width: 1000px;
+	height: 650px;
+}
+.gellary{
+height: 230px;
+width: 100%;
+position: relative;
+top: 100px;
+margin: 0 auto;
+
+}
+.gellary ul{
+	list-style: none;
+	left: -55px;
+	position: relative;
+	width: 1200px;
+}
+.gellary ul li{
+	width: 200px;
+	float: left;
+	padding-right: 20px;
+	margin-right: 23px;
+	
+}
+.gellary ul li img{
+	width: 220px;
+	height: 147px;
+}
+.gellary ul li a p{
+	
+	word-wrap : break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.heartvido{
+	margin: 0 auto;
+	padding: 10px 20px;	
+
+}
+.blockmovie{
+	height: 280px;
+	width: 250;
+
+
+
+}
+.vidoheart{
+	margin: 0 auto;
+	width: 1000px;
+	height: 650px;
+
+	/*background: red;*/
+}
+.vidoheart h2{
+
+	float: left;
+
+}
+.vidomovie{
+	position: relative;
+	top: 80px;
+	width: 250px;
+	height: 280px;
+	/*background: red;*/
+
+
+}
+.vidomovie ul li{
+	list-style: none;
+	height: 250px;
+	position: relative;
+	float: left;
+
+	
+}
+.picmovie{
+	position: absolute;
+	/*top: 55px;*/
+	right: 0;	
+	width: 250px;
+	height: 140px;
+	z-index: 1;
+	/*background: green;*/
+
+}
+.picmovie p{
+display: none;
+	width: 250px;
+	height: 240px;
+	top: -16px;
+}
+.picmovie a p {
+	color: white;
+}
+
+.picmovie:hover p {
+
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	border-radius: 10px;
+	bottom: -16px;
+	background:rgba(0, 0, 0, 0.50);
+}
+.picmovie img{
+	width: 250px;
+	height: 140px;
+	border-radius: 10px;
+	box-shadow:0px 1px 20px 0.2px #888;
+}
+.movietittle{
+	position: absolute;
+	right: 0;
+	top: 140px;
+	width: 250px;
+	height: 140px;
+		/*background: green;*/
+}
